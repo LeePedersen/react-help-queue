@@ -1,10 +1,16 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
+
+var ticketStyle = {
+  color: 'green',
+  fontSize:'16px',
+  fontWeight:'600'
+}
 
 function Ticket(props){
   return(
     <div>
-      <h3>{props.location} - {props.names}</h3>
+      <h3 style={ticketStyle}>{props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
       <hr/>
     </div>

@@ -34,6 +34,16 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
+        enforce: "pre",
+        loader: "eslint-loader",
+        exclude: /node_modules/,
+        options: {
+          emitWarning: true,
+          configFile: "./.eslintrc.json"
+        }
+      },
+      {
+        test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
@@ -45,7 +55,12 @@ module.exports = {
             "react-hot-loader/babel"
           ]
         }
-      }
+      },
+      {
+      test: /\.css$/,
+      include: /node_modules/,
+      loaders: ['style-loader', 'css-loader'],
+    }
     ]
   },
 

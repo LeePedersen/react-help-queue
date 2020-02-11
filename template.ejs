@@ -1,11 +1,14 @@
 <!DOCTYPE html>
+
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <title><%= htmlWebpackPlugin.options.title %></title>
+  <script rel="stylesheet" type="text/css" href="Index.css"></script>
 </head>
-  <body>
-    <% if (htmlWebpackPlugin.options.appMountId) { %>
-      <div id="<%= htmlWebpackPlugin.options.appMountId%>"></div>
+<body class="body-class">
+  <% if (htmlWebpackPlugin.options.appMountId) { %>
+    <div id="<%= htmlWebpackPlugin.options.appMountId%>"></div>
     <% } %>
-  </body>
+</body>
 </html>
